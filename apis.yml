@@ -1,0 +1,7 @@
+aid: northrop-grumman
+url: https://raw.githubusercontent.com/api-evangelist/northrop-grumman/refs/heads/main/apis.yml
+modified: '2026-03-21'
+apis: []
+common:
+  - type: Website
+    url: https://www.northrop-grumman.com
