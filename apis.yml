@@ -4,6 +4,10 @@ url:
 modified: '2026-03-21'
 apis: []
 common:
+  - type: GitHubOrganization
+    url: https://github.com/NorthropGrumman
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/northrop-grumman-corporation
   - type: Website
     url: https://www.northrop-grumman.com
 description: >-
