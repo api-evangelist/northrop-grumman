@@ -1,4 +1,6 @@
 aid: northrop-grumman
+tags:
+  - Fortune 500
 url: 
   https://raw.githubusercontent.com/api-evangelist/northrop-grumman/refs/heads/main/apis.yml
 modified: '2026-03-21'
