@@ -1,0 +1,54 @@
+generated: '2026-08-28'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml hosts (DoH via cloudflare-dns.com; TLS/HSTS via HTTPS handshake)
+note: >-
+  Northrop Grumman splits its web identity from its mail identity. The public web domain
+  northropgrumman.com carries no SPF, no DMARC, no CAA and no DNSSEC, while the corporate
+  mail domain ngc.com — which redirects to the same website — carries both an SPF record
+  and a DMARC policy at p=quarantine. northgrum.com (the authoritative nameserver domain)
+  carries SPF but no DMARC. The hyphenated domain northrop-grumman.com, which this
+  profile previously pointed at, does not resolve at all (NXDOMAIN).
+hosts:
+- host: www.northropgrumman.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 18 06:23:39 2026 GMT
+  hsts: true
+  hsts_max_age: 63072000
+domains:
+- domain: northropgrumman.com
+  role: public website
+  resolves: true
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false
+  note: >-
+    TXT records present but none is a v=spf1 policy; _dmarc.northropgrumman.com returns
+    NXDOMAIN (DNS status 3). No CAA records published.
+- domain: ngc.com
+  role: corporate mail domain; 301s to www.northropgrumman.com
+  resolves: true
+  dnssec: false
+  caa: []
+  spf: true
+  spf_record: 'v=spf1 exists:%{i}.spf.ngc.iphmx.com -all'
+  dmarc: true
+  dmarc_record: 'v=DMARC1; p=quarantine; fo=1; rua=mailto:dmarc_rua@ngc.com; ruf=mailto:dmarc_ruf@ngc.com'
+  dmarc_policy: quarantine
+- domain: northgrum.com
+  role: authoritative nameserver domain (sunrise/sundown/po/dnsdal.northgrum.com)
+  resolves: true
+  dnssec: false
+  caa: []
+  spf: true
+  spf_record: 'v=spf1 exists:%{i}.spf.ngc.iphmx.com -all'
+  dmarc: false
+- domain: northrop-grumman.com
+  role: not owned / not delegated
+  resolves: false
+  dns_status: NXDOMAIN
+  note: >-
+    Probed because the previous apis.yml Website pointer used this hyphenated form. It has
+    no A record and no nameservers; the pointer was dead and has been corrected to
+    https://www.northropgrumman.com/.

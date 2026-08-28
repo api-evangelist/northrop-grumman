@@ -1,0 +1,23 @@
+generated: '2026-08-28'
+method: searched
+source: >-
+  Web search for a Northrop Grumman MCP server, plus direct probes of
+  https://www.northropgrumman.com/.well-known/ai-plugin.json,
+  /.well-known/agent-card.json and /.well-known/agent.json (all HTTP 404)
+status: none
+server_count: 0
+tools: []
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: unknown
+  verified: searched
+note: >-
+  No Model Context Protocol server exists for Northrop Grumman — neither a hosted remote
+  endpoint nor a distributed stdio package. Nor is a candidate tool list derivable: the
+  company publishes no OpenAPI, GraphQL SDL, AsyncAPI or any other machine-readable
+  contract from which operations could be mapped (see well-known/northrop-grumman-well-known.yml
+  and x-coverage in apis.yml). No MCPServer pointer is emitted in apis.yml; this file
+  records the search result, not an agent surface.

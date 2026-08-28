@@ -1,0 +1,51 @@
+generated: '2026-08-28'
+method: searched
+source: >-
+  registry.npmjs.org search, pypi.org/pypi/<pkg>/json, rubygems.org/api/v1/search.json,
+  search.maven.org/solrsearch, and api.github.com/orgs/NorthropGrumman/repos
+package_count: 0
+official_package_count: 0
+packages: []
+note: >-
+  Northrop Grumman publishes no first-party client library on any public package registry.
+  npm search for "northrop" returns only third-party packages (northrop-calculator and
+  northrop-demopack by user ratikantabehera, and northrop.io-data-table by an unrelated
+  publisher named northrop.io) — none is Northrop Grumman Corporation. pypi.org has no
+  northrop-grumman project (404). RubyGems search returns an empty array. Maven Central
+  has zero artifacts under g:com.ngc or g:com.northropgrumman, and neither of the two
+  first-party Java projects in the GitHub org (jellyfish, seaside-gradle-plugins) has ever
+  been published to Central. No SDKs pointer is emitted in apis.yml because there is no
+  SDK to point at.
+registries_searched:
+- registry: npm
+  query: https://registry.npmjs.org/-/v1/search?text=northrop
+  first_party_hits: 0
+- registry: pypi
+  query: https://pypi.org/pypi/northrop-grumman/json
+  status: 404
+  first_party_hits: 0
+- registry: rubygems
+  query: https://rubygems.org/api/v1/search.json?query=northrop
+  first_party_hits: 0
+- registry: maven-central
+  query: https://search.maven.org/solrsearch/select?q=g:com.ngc
+  num_found: 0
+  first_party_hits: 0
+- registry: maven-central
+  query: https://search.maven.org/solrsearch/select?q=g:com.northropgrumman
+  num_found: 0
+  first_party_hits: 0
+source_repositories:
+- repo: https://github.com/NorthropGrumman/jellyfish
+  language: Java
+  published_to_registry: false
+  last_push: '2024-02-05'
+- repo: https://github.com/NorthropGrumman/seaside-gradle-plugins
+  language: Java
+  published_to_registry: false
+  last_push: '2024-02-05'
+- repo: https://github.com/NorthropGrumman/WLCAP
+  language: PowerShell
+  published_to_registry: false
+  last_push: '2024-09-06'
+  note: Windows Log Collector And Parser; distributed as source only.

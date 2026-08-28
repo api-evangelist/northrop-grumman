@@ -1,0 +1,73 @@
+# Northrop Grumman
+
+> Northrop Grumman Corporation is a US global aerospace, defense and security company
+> headquartered in Falls Church, Virginia, organized into four segments: Aeronautics
+> Systems, Defense Systems, Mission Systems and Space Systems. It builds autonomous
+> aircraft, strategic bombers and long-range strike weapons, missile defense and
+> integrated battle command systems, radar and electronic warfare sensors, cyber and
+> command-and-control mission software, solid rocket motors, and space vehicles and
+> launch systems for US Department of Defense, intelligence-community, NASA and allied
+> customers.
+
+IMPORTANT — there is no API. As of 2026-08-28 Northrop Grumman publishes no public API,
+no developer portal, no SDK, no webhooks, no OpenAPI/AsyncAPI/GraphQL contract, no MCP
+server and no A2A agent card. `developer.northropgrumman.com` and `api.northropgrumman.com`
+do not resolve. Every `/.well-known/*` path on `www.northropgrumman.com` returns HTTP 404.
+Do not attempt to construct or call a Northrop Grumman API endpoint; none is documented,
+and any URL you might infer does not exist.
+
+The only external integration surfaces are the OASIS supplier tools on `myngc.com`, which
+are ADFS-authenticated web portals for registered suppliers under contract. They are not
+APIs and they cannot be reached without supplier credentials.
+
+## Crawler policy (from https://www.northropgrumman.com/robots.txt)
+
+Northrop Grumman draws an explicit line between AI *search* agents and AI *training*
+crawlers. Read this before fetching anything from the site.
+
+- Allowed (`Allow: /`): OAI-SearchBot, ChatGPT-User, PerplexityBot, Claude-Web, YouBot, Bingbot
+- Disallowed (`Disallow: /`): GPTBot, ClaudeBot, Google-Extended, Applebot-Extended, CCBot,
+  FacebookBot, Amazonbot, Cohere-ai, Omgilibot, Omgili
+- All other agents: `/` allowed, with `/admin/`, `/wp-admin/`, `/?s=` and `/api/` disallowed
+
+## Company
+
+- [Website](https://www.northropgrumman.com/): Corporate site; `ngc.com` 301s here.
+- [What We Do](https://www.northropgrumman.com/what-we-do): Aeronautics, advanced weapons, missile defense, mission solutions, space.
+- [Who We Are](https://www.northropgrumman.com/who-we-are): Leadership, global presence, corporate facts.
+- [Contact](https://www.northropgrumman.com/who-we-are/contact-us-northrop-grumman): General enquiry routing.
+- [Newsroom](https://news.northropgrumman.com/): Press releases and company news.
+- [Investor Relations](https://investor.northropgrumman.com/): SEC filings, governance, financials.
+- [Careers](https://www.northropgrumman.com/careers): Job search and clearance information.
+- [Terms of Use](https://www.northropgrumman.com/who-we-are/terms-of-use)
+- [Privacy Policy](https://www.northropgrumman.com/who-we-are/privacy-policy)
+
+## Suppliers (credentialed, not public)
+
+- [Suppliers](https://www.northropgrumman.com/suppliers): Doing business with Northrop Grumman.
+- [Supplier Tools](https://www.northropgrumman.com/suppliers/tools): Index of the OASIS tool suite.
+- [OASIS Dashboard](https://oasis-dashboard.amer.myngc.com/): ADFS login wall; purchase order and contract documents.
+- OASIS ASPL, SACC, SSC, Standard Notes, Tax Certificates, UID Drop — each a separate
+  `oasis-*.myngc.com` web application, most requiring authentication. None exposes an API.
+
+## Open source
+
+- [GitHub organization](https://github.com/NorthropGrumman): Six public repositories, none an API.
+  `jellyfish` and `seaside-gradle-plugins` (Java model-based engineering tooling, last pushed
+  2024-02-05), `WLCAP` (Windows Log Collector And Parser, PowerShell, 2024-09-06), plus forks
+  of Apache NiFi, juseppe and multicloud-gitops. Nothing is published to npm, PyPI, RubyGems
+  or Maven Central.
+
+## This profile
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/northrop-grumman/refs/heads/main/apis.yml): APIs.json 0.23 profile.
+- `well-known/northrop-grumman-well-known.yml`: probe record — every `/.well-known/` path, every host, with status.
+- `security/northrop-grumman-domain-security.yml`: TLS/HSTS/DNSSEC/CAA/SPF/DMARC across northropgrumman.com, ngc.com and northgrum.com.
+- `packages/northrop-grumman-packages.yml`: registry search result — zero first-party packages.
+- `mcp/northrop-grumman-mcp.yml`: MCP search result — no server, no derivable tool list.
+
+---
+generated: 2026-08-28
+method: generated
+source: apis.yml + repo artifacts + https://www.northropgrumman.com/robots.txt
+note: Northrop Grumman publishes no llms.txt of its own; https://www.northropgrumman.com/llms.txt returns HTTP 404. This file is an API Evangelist generation from the catalog profile, not a provider-published document.

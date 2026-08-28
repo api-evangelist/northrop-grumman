@@ -1,0 +1,114 @@
+generated: '2026-08-28'
+method: probed
+source: >-
+  Direct HTTPS probes of /.well-known/* on every host reachable from apis.yml and from the
+  Northrop Grumman supplier tools page (https://www.northropgrumman.com/suppliers/tools)
+note: >-
+  Every probe missed. Northrop Grumman serves no /.well-known/ document of any kind on any
+  host reachable without credentials. On www.northropgrumman.com every path returns a clean
+  HTTP 404 with the Next.js not-found page (24,322 bytes of HTML) — a real 404, not a soft
+  200. The OASIS supplier dashboard answers 503 to unauthenticated requests for every path
+  including the root, because it sits behind an ADFS reverse proxy. No WellKnown and no
+  SecurityTxt pointer is emitted in apis.yml: this file records an ABSENCE, and a pointer
+  would assert a surface the provider does not serve.
+hosts:
+- host: www.northropgrumman.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: oasis-dashboard.amer.myngc.com
+  note: >-
+    ADFS-gated supplier dashboard. The root 307s to
+    https://ngc-fin.amer.myngc.com/adfs/ls?...action=signin; unauthenticated /.well-known/
+    requests are answered 503 by the application proxy rather than 404, so absence here is
+    not established — it is unreachable without supplier credentials.
+  documents:
+  - path: /.well-known/security.txt
+    status: 503
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 503
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 503
+    file: null
+  - path: /.well-known/api-catalog
+    status: 503
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 503
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 503
+    file: null
+  - path: /.well-known/agent.json
+    status: 503
+    file: null
+- host: oasis-aspl.myngc.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: news.northropgrumman.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

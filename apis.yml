@@ -1,6 +1,37 @@
 aid: northrop-grumman
 name: "Northrop Grumman"
 specificationVersion: '0.23'
+description: >-
+  Northrop Grumman Corporation is a US global aerospace, defense and security company
+  headquartered in Falls Church, Virginia, organized into four segments: Aeronautics
+  Systems, Defense Systems, Mission Systems and Space Systems. It builds autonomous
+  aircraft, strategic bombers and long-range strike weapons, missile defense and
+  integrated battle command systems, radar and electronic warfare sensors, cyber and
+  command-and-control mission software, solid rocket motors, and space vehicles and
+  launch systems for US Department of Defense, intelligence-community, NASA and allied
+  customers. It publishes no public developer program, API portal or machine-readable
+  API contract; its external integration surfaces are the ADFS-authenticated OASIS
+  supplier tools on myngc.com, available only to registered suppliers under contract.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/northrop-grumman.png
+tags:
+  - Aerospace
+  - Autonomous Systems
+  - Command and Control
+  - Cybersecurity
+  - Defense
+  - Fortune 100
+  - Fortune 500
+  - Government
+  - Manufacturing
+  - Mission Systems
+  - Space
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/northrop-grumman/refs/heads/main/apis.yml
+created: '2026-03-21'
+modified: '2026-08-28'
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -12,21 +43,61 @@ accessModel:
   source: []
   generated: '2026-07-22'
   method: derived
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/northrop-grumman.png
-tags:
-  - Fortune 500
-url: 
-  https://raw.githubusercontent.com/api-evangelist/northrop-grumman/refs/heads/main/apis.yml
-modified: '2026-03-21'
 apis: []
 common:
+  - type: DomainSecurity
+    url: security/northrop-grumman-domain-security.yml
+  - type: LLMsTxt
+    url: llms/northrop-grumman-llms.txt
+  - type: Website
+    url: https://www.northropgrumman.com/
   - type: GitHubOrganization
     url: https://github.com/NorthropGrumman
   - type: LinkedIn
     url: https://www.linkedin.com/company/northrop-grumman-corporation
-  - type: Website
-    url: https://www.northrop-grumman.com
-description: >-
-  Northrop Grumman is a global aerospace, defense, and security company that delivers
-  innovative systems, products, and solutions in autonomous systems, cyber, command
-  and control, space, and strike weapons.
+  - type: Blog
+    url: https://news.northropgrumman.com/
+  - type: Support
+    url: https://www.northropgrumman.com/who-we-are/contact-us-northrop-grumman
+  - type: TermsOfService
+    url: https://www.northropgrumman.com/who-we-are/terms-of-use
+  - type: PrivacyPolicy
+    url: https://www.northropgrumman.com/who-we-are/privacy-policy
+  - type: Careers
+    url: https://www.northropgrumman.com/careers
+  - type: Suppliers
+    url: https://www.northropgrumman.com/suppliers
+  - type: Investors
+    url: https://investor.northropgrumman.com/
+  - type: YouTube
+    url: https://www.youtube.com/channel/UCiTTe3mBodoZVGVhQDpEFjg
+  - type: X (Twitter)
+    url: https://twitter.com/northropgrumman
+x-enrichment:
+  date: '2026-08-28'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Northrop Grumman ships mission software but runs no developer program of any kind:
+    developer.northropgrumman.com and api.northropgrumman.com do not resolve, every
+    /.well-known/, /openapi.json and /llms.txt path on www.northropgrumman.com returns a
+    clean 404, and the only external integration surfaces — the OASIS supplier tools on
+    myngc.com — are ADFS-authenticated web portals with no documented API behind them.
+  evidence:
+    - url: https://www.northropgrumman.com/openapi.json
+      status: 404
+    - url: https://www.northropgrumman.com/.well-known/api-catalog
+      status: 404
+    - url: https://www.northropgrumman.com/.well-known/agent-card.json
+      status: 404
+    - url: https://www.northropgrumman.com/llms.txt
+      status: 404
+    - url: https://developer.northropgrumman.com/
+      status: 0
+    - url: https://oasis-dashboard.amer.myngc.com/
+      status: 307
+  checked: '2026-08-28'
