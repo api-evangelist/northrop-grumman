@@ -40,6 +40,8 @@ maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
 url: >-
+x-api-posture: partner-gated
+x-api-posture-basis: observed
   https://raw.githubusercontent.com/api-evangelist/northrop-grumman/refs/heads/main/apis.yml
 created: '2026-03-21'
 modified: '2026-08-28'
