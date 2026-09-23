@@ -1,7 +1,9 @@
 ---
 title: Artificial Intelligence
 url: https://news.northropgrumman.com/artificial-intelligence
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Northrop Grumman" press release artificial intelligence'
 position: 1
 source: serpapi-google

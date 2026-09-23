@@ -1,7 +1,9 @@
 ---
 title: Artificial Intelligence and Machine Learning
 url: https://www.northropgrumman.com/what-we-do/mission-solutions/artificial-intelligence-and-machine-learning
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Northrop Grumman" press release artificial intelligence'
 position: 3
 source: serpapi-google

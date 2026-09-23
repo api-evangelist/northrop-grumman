@@ -1,7 +1,9 @@
 ---
 title: Northrop Grumman Accelerates Innovation with AI ...
 url: https://www.linkedin.com/posts/travisgarriss_deploying-an-ai-factory-for-regulated-industries-activity-7424914206048731136-0XYR
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Northrop Grumman" press release artificial intelligence'
 position: 5
 source: serpapi-google
