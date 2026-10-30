@@ -1,4 +1,4 @@
-# Northrop Grumman (northrop-grumman)
+# Northrop Grumman
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,35 +64,84 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Northrop Grumman is a Fortune 500 company. This repository captures the APIs, developer tools, and machine-readable API artifacts for Northrop Grumman.
+Northrop Grumman Corporation is a US global aerospace, defense and security company headquartered in Falls Church, Virginia, organized into four segments: Aeronautics Systems, Defense Systems, Mission Systems and Space Systems. It builds autonomous aircraft, strategic bombers and long-range strike weapons, missile defense and integrated battle command systems, radar and electronic warfare sensors, cyber and command-and-control mission software, solid rocket motors, and space vehicles and launch systems for US Department of Defense, intelligence-community, NASA and allied customers. It publishes no public developer program, API portal or machine-readable API contract; its external integration surfaces are the ADFS-authenticated OASIS supplier tools on myngc.com, available only to registered suppliers under contract.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/northrop-grumman/refs/heads/main/apis.yml)
+**Areas:** Aerospace · Autonomous Systems · Command and Control · Cybersecurity · Defense · Fortune 100 · Fortune 500 · Government · Manufacturing · Mission Systems · Space
 
-## Scope
+## Northrop Grumman on APIs.io
 
-- **Type:** Contract
-- **Position:** Consuming
-- **Access:** 3rd-Party
+Everything profiled for Northrop Grumman is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/northrop-grumman/](https://apis.io/providers/northrop-grumman/)** — or go straight to one of the APIs or properties below.
 
-## Tags:
+### Published properties
 
- - Fortune 500
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Security (1)
 
-- **Created:** 2026-03-21
-- **Modified:** 2026-03-21
+Authentication, trust centre, and vulnerability disclosure.
 
-## APIs
+- [Northrop Grumman Domain Security](https://apis.io/security/northrop-grumman/northrop-grumman-domain-security/)
 
-No public APIs have been documented yet. Contributions welcome.
+## Where to find this API
 
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- [Website](https://www.northrop-grumman.com)
+- [Website](https://www.northropgrumman.com/)
+- [Support](https://www.northropgrumman.com/who-we-are/contact-us-northrop-grumman)
+- [Blog](https://news.northropgrumman.com/)
+- [Terms of service](https://www.northropgrumman.com/who-we-are/terms-of-use)
+- [Privacy policy](https://www.northropgrumman.com/who-we-are/privacy-policy)
+- [GitHub](https://github.com/NorthropGrumman)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** API Evangelist
+**Kin Score 11.6** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** info@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/northrop-grumman/](https://apis.io/providers/northrop-grumman/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Northrop Grumman: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/northrop-grumman/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
